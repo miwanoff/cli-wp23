@@ -10,14 +10,7 @@
 
     <title>Modern Business - Start Bootstrap Template</title>
 
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <?php wp_head();?>
 
 </head>
 
