@@ -1,9 +1,12 @@
 <?php
 
-function my_filter_function1($str)
-{
-    $str = '<strong>' . $str . '</strong>';
-    return $str; // возвращаем измененное значение!
-}
+// Setup
 
-add_filter('my_filter1', 'my_filter_function1');
+
+// Includes
+include get_theme_file_path('includes/enqueue.php');
+
+// Hooks
+
+
+// Shortcodes
