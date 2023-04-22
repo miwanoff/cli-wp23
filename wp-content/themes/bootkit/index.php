@@ -31,6 +31,7 @@ get_header();?>
             </div>
         </div>
         <?php get_sidebar();?>
+        <?php /* get_sidebar('second') sidebar-second.php */ ?>
     </div>
     <!-- /.row -->
 </div>
