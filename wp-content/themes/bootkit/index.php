@@ -75,14 +75,24 @@
                     </li>
                 </ul> -->
                 <?php
+// if (has_nav_menu('primary')) {
+//     wp_nav_menu([
+//         'theme_location' => 'primary',
+//         'container' => false,
+//         'menu_class' => 'menu',
+//         'fallback_cb' => false,
+//         'depth' => 4,
+//     ]);
+// }
 if (has_nav_menu('primary')) {
-    wp_nav_menu([
+    wp_nav_menu(array(
         'theme_location' => 'primary',
+        'depth' => 2,
         'container' => false,
-        'menu_class' => 'menu',
+        'menu_class' => 'navbar-nav ml-auto',
         'fallback_cb' => false,
-        'depth' => 4,
-    ]);
+        'walker' => new Bootkit_Nav_Walker(),
+    ));
 }
 ?>
             </div>
