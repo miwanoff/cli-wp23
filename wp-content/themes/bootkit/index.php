@@ -5,33 +5,70 @@ get_header();?>
     <h1 class="my-4">Welcome to Modern Business</h1>
     <!-- Marketing Icons Section -->
     <div class="row">
-        <div class="col-lg-4 mb-4">
-            <div class="card h-100">
-                <h4 class="card-header">Card Title</h4>
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
-                        necessitatibus neque.</p>
+                    <h2 class="card-title">Post Title</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
+                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
+                        voluptate voluptatibus possimus, veniam magni quis!</p>
+                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
                 </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                <div class="card-footer text-muted">
+                    Posted on January 1, 2017 by
+                    <a href="#">Start Bootstrap</a>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-            <div class="card h-100">
-                <h4 class="card-header">Card Title</h4>
+
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam
-                        eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque
-                        exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+                    <h2 class="card-title">Post Title</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
+                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
+                        voluptate voluptatibus possimus, veniam magni quis!</p>
+                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
                 </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                <div class="card-footer text-muted">
+                    Posted on January 1, 2017 by
+                    <a href="#">Start Bootstrap</a>
                 </div>
             </div>
+
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Post Title</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
+                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
+                        voluptate voluptatibus possimus, veniam magni quis!</p>
+                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Posted on January 1, 2017 by
+                    <a href="#">Start Bootstrap</a>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+                <li class="page-item">
+                    <a class="page-link" href="#">&larr; Older</a>
+                </li>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#">Newer &rarr;</a>
+                </li>
+            </ul>
+
         </div>
         <?php get_sidebar();?>
-        <?php /* get_sidebar('second') sidebar-second.php */ ?>
+        <?php /* get_sidebar('second') sidebar-second.php */?>
     </div>
     <!-- /.row -->
 </div>
