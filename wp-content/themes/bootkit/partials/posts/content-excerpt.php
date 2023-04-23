@@ -6,14 +6,16 @@
 }?>
                 <div class="card-body">
                     <!-- <h2 class="card-title">Post Title</h2> -->
+                    <p> Post category: <?php the_category(" ")?></p>
                     <h2 class="card-title"><a href="<?php the_permalink()?>"><?php the_title()?></a></h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
-                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
-                        voluptate voluptatibus possimus, veniam magni quis!</p>
+                    <p class="card-text">
+                        <?php the_excerpt()?>
+                    </p>
                     <a href="<?php the_permalink()?>" class="btn btn-primary">Read More &rarr;</a>
                 </div>
                 <div class="card-footer text-muted">
                     Posted on <?php echo get_the_date() ?> by
-                    <a href="#">Start Bootstrap</a>
+                    <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author()?></a>
+                    Comments: <?php comments_number("0");?>
                 </div>
             </div>
