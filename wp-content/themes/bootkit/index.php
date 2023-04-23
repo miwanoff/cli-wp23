@@ -7,7 +7,10 @@ get_header();?>
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-
+            <?php if (have_posts()) {
+    while (have_posts()) {
+        the_post();
+        ?>
             <!-- Blog Post -->
             <div class="card mb-4">
                 <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
@@ -23,7 +26,10 @@ get_header();?>
                     <a href="#">Start Bootstrap</a>
                 </div>
             </div>
-
+            <?php
+}
+}
+?>
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center mb-4">
