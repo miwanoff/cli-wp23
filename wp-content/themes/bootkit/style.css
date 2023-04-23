@@ -63,3 +63,8 @@
   text-transform: uppercase;
   padding-top: 10px;
 }
+
+.card-img-top {
+  height: 300px !important;
+  object-fit: cover;
+}
