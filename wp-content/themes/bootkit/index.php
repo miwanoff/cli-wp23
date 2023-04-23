@@ -17,12 +17,15 @@ get_header();?>
 ?>
 
             <!-- Pagination -->
+            <?php /*  posts_nav_link() */?>
             <ul class="pagination justify-content-center mb-4">
                 <li class="page-item">
-                    <a class="page-link" href="#">&larr; Older</a>
+                    <?php previous_posts_link("&larr; Older");?>
+                    <!-- <a class="page-link" href="#">&larr; Older</a> -->
                 </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">Newer &rarr;</a>
+                <li class="page-item">
+                    <?php next_posts_link("Newer &rarr;");?>
+                    <!-- <a class="page-link" href="#">Newer &rarr;</a> -->
                 </li>
             </ul>
 
