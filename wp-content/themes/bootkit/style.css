@@ -64,7 +64,16 @@
   padding-top: 10px;
 }
 
-.card-img-top {
+/* .card-img-top {
   height: 300px !important;
   object-fit: cover;
+} */
+
+.card-img-top {
+  height: auto !important;
+}
+
+.container img,
+img {
+  max-width: 100% !important;
 }

@@ -20,7 +20,7 @@
                 <a href="<?php echo $author_URL; ?>"><?php the_author();?></a>
             </p>
             <!-- Post category: -->
-            <h3 class="mt-4"><?php the_category(" ")?></h3>
+            <h4 class="mt-4"><?php the_category(" ")?></h4>
             <?php
 if (has_post_thumbnail()) {
             the_post_thumbnail("full", ["class" => "card-img-top"]);
@@ -36,8 +36,49 @@ if (has_post_thumbnail()) {
             <hr>
             <p class="card-text">
                 <!-- Post Content -->
-                <?php the_content();?>
+                <?php the_content();
+        $defaults = array(
+            'before' => '<div class="row justify-content-center align-items-center">' . __('Pages:'),
+            'after' => '</div>',
+        );
+        wp_link_pages($defaults);
+        edit_post_link();
+        ?>
+                <!-- Post Author Info -->
+            <div class="card">
+                <div class="card-header">
+                    <strong>
+                        Posted by
+                        <a href="<?php echo $author_URL; ?>"><?php the_author();?></a>
+                    </strong>
+                </div>
+                <div class="card-body">
+                    <div class="author-image">
+                        <?php echo get_avatar($author_ID, 90, '', false, ['class' => 'img-circle']); ?>
+                    </div>
+                    <?php echo nl2br(get_the_author_meta('description')); ?>
+                </div>
+            </div><!-- Post Single - Author End -->
+            <!-- Comments Form -->
+            <?php
+if (comments_open() || get_comments_number()) {
+            comments_template();
+        }
+        ?>
+
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+                <li class="page-item">
+                    <?php previous_post_link();?>
+                </li>
+                <li class="page-item">
+                    <?php next_post_link();?>
+                </li>
+            </ul>
             </p>
+            <!-- Tag cloud -->
+            <?php the_tags('', ', ');?>
+            <hr>
             <?php
 }
 }?>
