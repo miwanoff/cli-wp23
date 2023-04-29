@@ -1,0 +1,7 @@
+.card-img-top {
+  height: auto !important;
+}
+
+.container img {
+  max-width: 100% !important;
+}
