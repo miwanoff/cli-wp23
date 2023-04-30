@@ -1,6 +1,5 @@
 <?php
 
-
 function bootkit_enqueue()
 {
     $ver = BOOTSTRAPTOPIC_DEV_MODE ? time() : false;
@@ -15,7 +14,7 @@ function bootkit_enqueue()
     wp_enqueue_style('bootkit_modern_business');
     wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('my_bootkit');
-    
+
     wp_register_script('bootkit_bootstrap', $url .
         '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js', ['jquery'], $ver, true);
     wp_enqueue_script('jquery');
