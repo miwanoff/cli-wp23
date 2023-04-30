@@ -139,4 +139,7 @@ if (has_post_thumbnail()) {
     <!-- /.container -->
 
 </div>
-<?php get_footer();?>
+<h5>Meta data:</h5>
+<?php the_meta();?>
+<?php 
+get_footer();?>
