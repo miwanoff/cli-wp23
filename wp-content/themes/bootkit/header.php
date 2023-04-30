@@ -42,6 +42,22 @@ if (has_nav_menu('primary')) {
 ?>
             </div>
         </div>
+
+        <!-- Top Social ============================================= -->
+        <div id="top-social">
+            <ul>
+                <?php
+if (get_theme_mod('bootkit_facebook_handle')) {
+    ?>
+                <li><a href="<?php echo get_theme_mod('bootkit_facebook_handle'); ?>" target="_blank">
+                        <i class="fa fa-facebook"></i></a>
+                </li>
+                <?php
+}
+?>
+            </ul>
+        </div><!-- #top-social end -->
+
     </nav>
     <?php if (is_front_page()) {?>
     <header>

@@ -6,3 +6,31 @@
 img {
   max-width: 100% !important;
 }
+
+#top-social ul {
+  list-style-type: none;
+}
+
+#top-social ul li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+/* Style all font awesome icons */
+.fa {
+  font-size: 15px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Facebook */
+.fa-facebook {
+  color: #3b5998;
+}
