@@ -104,3 +104,5 @@ if (get_theme_mod('bootkit_facebook_handle')) {
         </div>
     </header>
     <?php }?>
+
+    <?php breadcrumbs(); ?>
