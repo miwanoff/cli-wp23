@@ -26,11 +26,11 @@ add_action('customize_register', 'bootkit_customize_register');
 // Shortcodes
 
 // Tests
-function hooked_title($title)
-{
-    return 'Hooked ' . $title;
-}
-add_filter('the_title', 'hooked_title');
+// function hooked_title($title)
+// {
+//     return 'Hooked ' . $title;
+// }
+// add_filter('the_title', 'hooked_title');
 
 function added_footer()
 {
