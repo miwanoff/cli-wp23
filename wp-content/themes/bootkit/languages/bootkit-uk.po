@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bootkit\n"
+"POT-Creation-Date: 2023-05-07 15:31+0300\n"
+"PO-Revision-Date: 2023-05-07 15:33+0300\n"
+"Last-Translator: \n"
+"Language-Team: M.A.I.\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:23
+msgid "Name"
+msgstr "Ім'я"
+
+#: comments.php:28
+msgid "Email"
+msgstr ""
+
+#: comments.php:33
+msgid "Website"
+msgstr "Сайт"
+
+#: comments.php:38
+msgid "Submit Comment"
+msgstr "Додати коментар"
+
+#: comments.php:39
+msgid "<h5 class=\"card-header\">Leave a Comment</span>:"
+msgstr "<h5 class=\"card-header\">Залиште коментар</span>:"
+
+#: full-width.php:52 mini.php:15 mini_news.php:14 single.php:41
+msgid "Pages:"
+msgstr "Сторінки"
+
+#: includes/setup.php:5
+msgid "Primary Menu"
+msgstr "Головне меню"
+
+#: includes/theme-customizer.php:6
+msgid "Bootkit Social Settings"
+msgstr ""
+
+#: includes/theme-customizer.php:14
+msgid "Facebook"
+msgstr ""
+
+#: includes/widgets.php:7
+msgid "Bootkit first Sidebar"
+msgstr ""
+
+#: includes/widgets.php:9
+msgid "Bootkit first Sidebar for something."
+msgstr ""
+
+#: includes/widgets.php:18
+msgid "Bootkit second Sidebar for something."
+msgstr ""
+
+#: searchform.php:8 searchform.php:10 searchform.php:3
+msgid "Search"
+msgstr "Шукати"
+
+
