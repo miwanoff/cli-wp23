@@ -102,7 +102,7 @@ if (get_theme_mod('bootkit_facebook_handle')) {
                 <span class="sr-only">Next</span>
             </a>
         </div>
+
     </header>
     <?php }?>
-
-    <?php breadcrumbs(); ?>
+    <?php breadcrumbs();?>

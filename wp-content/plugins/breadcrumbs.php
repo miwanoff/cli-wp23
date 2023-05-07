@@ -9,31 +9,36 @@ Author URI: https://example.com/
 License: GPL2
  */
 
+// Make sure we don't expose any info if called directly
+if (!function_exists('add_action')) {
+    echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
+    exit;
+}
+
 function breadcrumbs()
 {
-    echo '<div class="breadcrumbs">';
+    echo '<ol class="breadcrumb">';
     if (!is_front_page()) {
-        echo '<a href="';
+        echo '<li class="breadcrumb-item"><a href="';
         echo get_option('home');
-        echo '">' . __("Home") . '</a> / ';
-        // if (is_category() || is_single()) {
-        //     the_category(' ');
-        //     if (is_single()) {
-        //         echo " » ";
-        //         the_title();
-        //     }
-        // }
-        if (is_single()) {
-          //  echo " » ";
-            the_title();
+        echo '">' . __("Home") . '</a></li>';
+        if (is_category() || is_single()) {
+            echo '<li class="breadcrumb-item">';
+            the_category('&nbsp;/&nbsp;');
+            echo '</li>';
+            if (is_single()) {
+                echo '<li class="breadcrumb-item active">';
+                the_title();
+                echo '</li>';
+            }
         } elseif (is_page()) {
+            echo '<li class="breadcrumb-item active">';
             echo the_title();
+            echo '</li>';
         }
-    } 
-    
-    // else {
-    //     echo __("Home");
-    // }
-    echo '</div>';
+    } else {
+        echo __('<li class="breadcrumb-item">' . __("Home") . '</li>');
+    }
+    echo '</ol>';
 }
 // add_action('wp_head', 'breadcrumbs');
