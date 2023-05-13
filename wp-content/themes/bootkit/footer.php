@@ -16,6 +16,7 @@ if (get_theme_mod('bootkit_facebook_handle')) {
 ?>
             </ul>
         </div><!-- #top-social end -->
+
     </div>
     <!-- /.container -->
 </footer>
