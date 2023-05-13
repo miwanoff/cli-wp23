@@ -25,30 +25,21 @@ add_action('customize_register', 'bootkit_customize_register');
 
 // Shortcodes
 
-// [foobar]
-
-function foobar_func($atts)
-{
-    return "foo and bar";
-}
-add_shortcode('foobar', 'foobar_func');
-
-// [bartag foo="foo-value"]
-
-function bartag_func($atts)
-{
-    extract(shortcode_atts(array(
-        'foo' => 'значение по умолчанию 1',
-        'bar' => 'значение по умолчанию 2',
-    ), $atts));
-    return "foo = {$foo}";
-}
-add_shortcode('bartag', 'bartag_func');
-
 // [myurl]
 function site_url_shortcode($atts)
 {
     return site_url();
 }
 add_shortcode('myurl', 'site_url_shortcode');
+
 // Tests
+
+add_action('wp_ajax_bootkit', 'bootkit_ajax');
+add_action('wp_ajax_nopriv_bootkit', 'bootkit_ajax');
+
+function bootkit_ajax()
+{
+    $summa = $_POST['param1'] + $_POST['param2'];
+    echo $summa;
+    die;
+}
