@@ -44,7 +44,7 @@ function bootkit_ajax()
     die;
 }
 
-//-----------Test Widget -----------
+//-----------Test Simple Widget -----------
 
 /* Виджет Bootkit Widget */
 class bootkit_widget extends WP_Widget
