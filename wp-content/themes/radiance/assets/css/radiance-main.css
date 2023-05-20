@@ -1,0 +1,35 @@
+/* General - Start */
+::-webkit-scrollbar {
+	width: 7px;
+	background-color: rgb(224, 224, 224);
+}
+::-webkit-scrollbar-thumb {
+	background: rgb(143, 143, 143);
+	border-radius: 50px;
+}
+ul{
+	padding-left: 0;
+}
+img{
+	max-width: 100%;
+	object-fit: cover;
+}
+.wp-block-button:hover a{
+	color: #fff;
+}
+/* General - End */
+/* Pagination - Start */
+.page-link:hover{
+	background-color: #002df7;
+}
+/* Pagination - End */
+/* Search - Start */
+form.search-form{
+	display: flex;
+}
+/* Search - End */
+/* Blog - Start */
+.blog{
+	padding: 0 !important;
+}
+/* Blog - End */
