@@ -2,11 +2,11 @@
 function kc_show_carousel($content)
 {
     $args = [
-        'post_type' => 'post',
-        'showposts' => 6,
-        'category_name' => 'news',
+        'post_type' => get_option('kc_post_type') ? get_option('kc_post_type') : 'post',
+        'showposts' => get_option('kc_count'),
+        'category_name' => get_option('kc_category_name'),
 
-        //'tag' => 'news',
+        'tag' => get_option('kc_tag'),
         'post_status' => 'publish',
         'orderby' => 'date',
         'order' => 'DESC',

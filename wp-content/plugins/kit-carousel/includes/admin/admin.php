@@ -14,9 +14,15 @@ function register_mysettings()
     register_setting('kc-settings-group', 'kc_post_type');
     register_setting('kc-settings-group', 'kc_category_name');
     register_setting('kc-settings-group', 'kc_tag');
+    register_setting('kc-settings-group', 'kc_count');
 }
 function kc_settings_page()
 {
+    $kc_post_types = get_post_types(['public' => true]);
+    unset($kc_post_types['attachment']);
+    $kc_categories = get_categories([
+        'taxonomy' => 'category']);
+    $kc_categories["empty"]["name"] = "";
     ?>
 <div class="wrap">
     <h2>Kit Carousel</h2>
@@ -36,6 +42,11 @@ function kc_settings_page()
             <tr valign="top">
                 <th scope="row">Tags</th>
                 <td><input type="text" name="kc_tag" value="<?php echo get_option('kc_tag'); ?>" /></td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Count</th>
+                <td><input type="number" name="kc_count" value="<?php echo get_option('kc_count'); ?>" min="1"
+                        max="12" /></td>
             </tr>
         </table>
         <p class="submit">
