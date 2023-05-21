@@ -6,9 +6,9 @@ function kc_create_menu()
     //create new top-level menu
     add_menu_page('Kit Carousel Plugin Settings', 'Kit Carousel Settings', 'administrator', __FILE__, 'kc_settings_page', plugins_url('/images/icon.png', __FILE__));
     //call register settings function
-    add_action('admin_init', 'register_mysettings');
+    add_action('admin_init', 'register_kc_settings');
 }
-function register_mysettings()
+function register_kc_settings()
 {
     //register our settings
     register_setting('kc-settings-group', 'kc_post_type');
@@ -31,17 +31,36 @@ function kc_settings_page()
         <table class="form-table">
             <tr valign="top">
                 <th scope="row">Post Type</th>
-                <td><input type="text" name="kc_post_type" value="<?php echo get_option('kc_post_type'); ?>" />
+                <td>
+                    <!-- <input type="text" name="kc_post_type" value="<?php /* echo get_option('kc_post_type');*/?>" /> -->
+                    <select name="kc_post_type" id="kc_post_type">
+                        <?php foreach ($kc_post_types as $kc_post_type) {
+        echo '<option value="' . $kc_post_type . '" ' . selected(get_option('kc_post_type'), $kc_post_type) . '>' . $kc_post_type . '</option>';
+    }
+    ?>
+                    </select>
                 </td>
             </tr>
             <tr valign="top">
                 <th scope="row">Category Name</th>
-                <td><input type="text" name="kc_category_name" value="<?php echo get_option('kc_category_name'); ?>" />
+                <td>
+                    <!-- <input type="text" name="kc_category_name" value="<?/* php echo get_option('kc_category_name');*/ ?>" /> -->
+                    <select name="kc_category_name" id="kc_category_name">
+
+
+                        <?php foreach ($kc_categories as $kc_category) {
+        echo '<option value="' . $kc_category->name . '" ' . selected(get_option('kc_category_name'), $kc_category->name) . '>' . ($kc_category->name ? $kc_category->name : "none") . '</option>';
+    }
+    ?>
+                    </select>
                 </td>
             </tr>
             <tr valign="top">
                 <th scope="row">Tags</th>
-                <td><input type="text" name="kc_tag" value="<?php echo get_option('kc_tag'); ?>" /></td>
+                <td>
+                    <input type="text" name="kc_tag" value="<?php echo get_option('kc_tag'); ?>" />
+
+                </td>
             </tr>
             <tr valign="top">
                 <th scope="row">Count</th>
