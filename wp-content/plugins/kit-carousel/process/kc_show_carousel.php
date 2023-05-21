@@ -78,5 +78,6 @@ function kc_show_carousel($content)
     //         </div>
     //     </div>
     // </section>';
+    wp_reset_postdata();
     return $content . $html;
 }

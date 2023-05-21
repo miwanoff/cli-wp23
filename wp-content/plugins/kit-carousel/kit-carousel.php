@@ -16,15 +16,18 @@ if (!function_exists('add_action')) {
     exit;
 }
 
+
 // Setup
 define('KC_PLUGIN_URL', __FILE__);
 
 // Includes
+include 'includes/admin/admin.php';
 include 'includes/front/enqueue.php';
 include 'process/kc_show_carousel.php';
 
 // Hooks
 add_action('wp_enqueue_scripts', 'kc_enqueue_scripts', 100);
 add_filter('the_content', 'kc_show_carousel');
+add_action('admin_menu', 'kc_create_menu');
 
 // Shortcodes
