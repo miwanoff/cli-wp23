@@ -31,7 +31,7 @@ add_action('wp_enqueue_scripts', 'kc_enqueue_scripts', 100);
 add_action('admin_menu', 'kc_create_menu');
 
 // Shortcodes
-function kc_show_carousel_shortcode($atts)
+function kc_show_carousel_shortcode($content)
 {
     return kc_show_carousel($content);
 }
